@@ -13,7 +13,7 @@ function debug($param) {
 //Fonction qui indique si l'internaute est connecté
 
 function internauteEstConnecte(){
-    if(isset($_SESSION['membre'])){ //si la session 'membre' existe, c'est que l'internaute est passé par
+    if(isset($_SESSION['admin'])){ //si la session 'membre' existe, c'est que l'internaute est passé par
         // la page de connexion et que nous avons crée cet indice dans $_SESSION
         return true;
     }else{
@@ -25,14 +25,14 @@ function internauteEstConnecte(){
 
 //Fonction qui indique si le membre est admin connecté
 function internauteEstConnecteEtAdmin(){
-    if(internauteEstConnecte()&& $_SESSION['membre']['statut'] ==1){//si membre connecté ET que son statut dans la session vaut 1, il est admin connecté
+    if(internauteEstConnecte()&& $_SESSION['admin']['statut'] ==1){//si membre connecté ET que son statut dans la session vaut 1, il est admin connecté
         return true;
 
     }else{
         return false;
     }
     //OU:
-    return(internauteEstConnecte()&& $_SESSION['membre']['statut'] ==1);
+    return(internauteEstConnecte()&& $_SESSION['admin']['statut'] ==1);
 
 }
 

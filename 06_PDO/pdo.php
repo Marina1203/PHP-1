@@ -242,7 +242,8 @@ $pdo = new PDO('mysql:host=localhost;dbname=entreprise',//driver mysql + serveur
 
          //On veut afficher dynamiquement les resultats de la requête sous forme de table HTML
 
-         $resultat = $pdo->query("SELECT id_employes, prenom, nom, service,salaire FROM employes ORDER BY salaire DESC");
+         $resultat = $pdo->query("SELECT id_produit, reference, categorie, titre, description,
+         couleur, taille, public, photo_bdd, prix, stock FROM produit");
 
          echo '<table border="1">';
 

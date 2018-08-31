@@ -82,7 +82,7 @@ if(!isset($_POST['nom']) || strlen($_POST['nom']) <3 || strlen($_POST['nom'])>
             $message .= '<div>Une erreur est survenue lors de l\'enregistrement</div>';
         }
 
-     }//fin du if (!empty($message))
+     }//fin du if (empty($message))
 
         } //fin du if (!empty($_POST))
 
@@ -110,7 +110,7 @@ if(!isset($_POST['nom']) || strlen($_POST['nom']) <3 || strlen($_POST['nom'])>
      <label for="salaire">Salaire</label><br>
     <input type="text" id="salaire" name="salaire" value=""><br><br>
 
-    <input type="submit" value="enregistrer"><br><br>
+    <input type="submit" name="submit" value="enregistrer"><br><br>
     </form>
 
     <?php
