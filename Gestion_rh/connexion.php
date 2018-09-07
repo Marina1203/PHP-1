@@ -36,6 +36,7 @@ if(isset($_GET['action'])&& $_GET['action'] == 'deconnexion'){ //si l'internaute
 
 
 
+    
 /* debug($_POST); */
 
 //1- TRAITEMENT DU FORMULAIRE:

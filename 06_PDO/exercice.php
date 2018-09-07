@@ -32,7 +32,7 @@ echo'<ul>';
  while($donnees = $resultat->fetch(PDO::FETCH_ASSOC)){
    
    
-    echo '<li>'.$donnees['prenom'].' '.$donnees['nom'].' '.$donnees['salaire'].'</li>';
+    echo '<li>'.$donnees['prenom'].' '.$donnees['nom'].' '.$donnees[0]['salaire'].'</li>';
 }
 echo'</ul>';
 
